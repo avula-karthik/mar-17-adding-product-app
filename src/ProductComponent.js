@@ -1,16 +1,8 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 const ProductComponent = () => {
-    let [product, setProduct] = useState([
-        {
-            name: 'Pen',
-            price: 30,
-            description: 'Pen Description',
-            category: 'Toys',
-            status: 'available',
-        },
-    ]);
+    let [prolength, setProLength] = useState();
+    let [product, setProduct] = useState([]);
     useEffect(() => {
         getProducts();
     }, []);
@@ -27,9 +19,7 @@ const ProductComponent = () => {
             });
     };
     const deleteAll = () => {
-        console.log('Clicked Dletee');
-        axios.delete('/products/all');
-        getProducts();
+        axios.put('/products/clearAll').then(getProducts());
     };
     const addProduct = (event) => {
         event.preventDefault();
@@ -100,14 +90,13 @@ const ProductComponent = () => {
                 <br />
                 <div className='text-center'>
                     <button className='btn btn-primary'>Add Product</button>
-                    <button
-                        className='btn btn-danger'
-                        onClick={() => deleteAll()}
-                    >
-                        Delete all
-                    </button>
                 </div>
             </form>
+            <div>
+                <button className='btn btn-danger' onClick={() => deleteAll()}>
+                    Delete all
+                </button>
+            </div>
             {product.map((val, index) => {
                 return (
                     <div className='eachItem cardbody border border-primary'>

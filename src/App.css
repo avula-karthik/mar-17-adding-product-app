@@ -63,3 +63,13 @@
 .productdiffbag {
     background-color: cornflowerblue;
 }
+.card-body-eachForum {
+    padding: 2%;
+    width: 90%;
+    margin: auto;
+    border: 10px solid #888888;
+    box-shadow: 5px 10px black;
+}
+.forumTitle {
+    background-color: cornflowerblue;
+}
