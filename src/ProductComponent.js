@@ -52,6 +52,7 @@ const ProductComponent = () => {
     return (
         <div>
             <form className='myproductForm' onSubmit={addProduct}>
+                <h1>Product Component</h1>
                 <label>Product Name</label>
                 <input
                     required

@@ -46,8 +46,10 @@
 }
 .myselectBox {
     margin-left: 2%;
+    margin-top: 2%;
     width: 20%;
     font-size: 18px;
+    background-color: #1b9df0;
 }
 .radio {
     display: inline;
@@ -72,4 +74,31 @@
 }
 .forumTitle {
     background-color: cornflowerblue;
+}
+.myHobbyForm {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+.twitterForm {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+.deleteallTwitterbtn {
+    margin-top: 1%;
+}
+input {
+    font-size: larger;
+}
+.eachTweet {
+    width: 90%;
+    border: 5px solid black;
+    box-shadow: 0 10px 100px gray;
+    margin: auto;
+    margin-top: 1%;
+}
+.authorSameLine {
+    display: inline;
 }

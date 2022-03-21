@@ -79,6 +79,7 @@ const ForumComponent = () => {
                 noValidate
                 className='myproductForm'
             >
+                <h1>Forum Component</h1>
                 <label>Title</label>
                 <input
                     required
